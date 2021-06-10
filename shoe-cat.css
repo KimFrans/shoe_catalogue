@@ -1,0 +1,77 @@
+.header{
+    text-align: center;
+    padding-top: 1.5%;
+    padding-bottom: 1%;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom right, rgb(228, 120, 138),rgb(47, 216, 132),rgb(109, 148, 231));
+
+}
+h1 {
+    color: rgb(231, 38, 118);
+    text-shadow: 2px 2px rgb(247, 244, 245);
+    font-weight: bold;
+}
+body{
+    box-sizing: border-box;
+    background-color: rgb(177, 243, 226);
+}
+.display .search-menu{
+    margin-top: 2%;
+    /* float: left; */
+    width: 15%;
+    padding: 1.5em;
+    background-color: rgb(241, 149, 165);
+    border-radius: 15px;
+    box-shadow: 5px 10px rgb(192, 182, 182);
+}
+.display .search-menu .brand-search{
+    padding-top: 5%;
+}
+
+.display .search-menu .size-search{
+    padding-top: 5%;
+}
+
+.display .search-menu .color-search{
+    padding-top: 5%;
+}
+
+.display .search-menu .search{
+    padding-top: 5%;
+    text-align: center;
+}
+
+.display .search-menu .search-button{
+    background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  /* text-align: center; */
+  margin: 4px 2px;
+  /* padding-top: 5%; */
+}
+
+li{
+    margin: 0.5%;
+    padding: 5px 5px;
+    background-color:#ddd;
+    display: inline-block;
+    /* width: 30%; */
+    color: black;
+    text-align: center;
+    border-radius: 10px;
+    /* float: right; */
+    /* overflow: auto; */
+    /* row-gap: 0.5%; */
+}
+
+/* .display .shoe-display{ */
+    /* column-count: 4; */
+    /* column-width: auto; */
+    /* position: absolute; */
+    /* float: right; */
+/* } */
