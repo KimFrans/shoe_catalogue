@@ -10,3 +10,8 @@ var userData = {shoe: shoeFactory.values().shoeObj}
 
 var userDataHTML = userTemplate(userData)
 templateDisplay.innerHTML = userDataHTML
+
+function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+  }
