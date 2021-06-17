@@ -18,7 +18,7 @@
                     <label for="brand">Size: </label>{{this.size}}<br>
                     <label for="brand">Colour: </label>{{this.color}}<br>
                     <label for="brand">Stock: </label>{{this.stock}}<br>
-                    <label for="brand">Price: </label>{{this.price}}<br>
+                    <label for="brand">Price: R </label>{{this.price}}<br>
                     <button class="addToCart">Add to cart</button>
                 </li>
         {{/each}}
@@ -33,10 +33,31 @@
     </div>
 
     <div id="navbar">
+        <button id="cart-btn"><i class="fas fa-shopping-cart"></i></button>
         <!-- <button class="btn"><i class="fas fa-shopping-cart"></i></button> -->
-        <div class="popup" onclick="myFunction()"><i class="fas fa-shopping-cart"></i>
+        <!-- <div class="popup" onclick="myFunction()"><i class="fas fa-shopping-cart"></i>
             <span class="popuptext" id="myPopup">A Simple Popup!</span>
+        </div> -->
+    </div>
+
+    <!-- <button id="cart-btn"><i class="fas fa-shopping-cart"></i></button> -->
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <!-- <p>Some text in the Modal..</p> -->
+            <div class="cart-items">
+                <ul class="cart-list">
+                    <!-- <button class="remove-cart">Remove</button> -->
+                </ul>
+
+            </div>
+            <!-- <button class="remove-cart">Remove</button> -->
         </div>
+
     </div>
 
 
@@ -46,7 +67,38 @@
             <div class="search-menu">
                 <h3>Search the shoe of your dreams!</h3>
 
-                <div class="brand-search">
+                <form >
+                    <label for="brand">Choose a brand:</label>
+                    <select name="brand" id="brand">
+                        <option value="nike">Nike</option>
+                        <option value="adidas">Adidas</option>
+                        <option value="vans">Vans</option>
+                        <option value="converse">Converse</option>
+                        <option value="jordan">Jordan</option>
+                    </select><br>
+                    <label for="size">Choose a size:</label>
+                    <select name="size" id="size">
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select><br>
+                    <label for="color">Choose a color:</label>
+                    <select name="color" id="color">
+                        <option value="blue">blue</option>
+                        <option value="red">red</option>
+                        <option value="pink">pink</option>
+                        <option value="grey">grey</option>
+                        <option value="black">black</option>
+                        <option value="yellow">yellow</option>
+                        <option value="white">white</option>
+                    </select>
+                </form>
+
+                <!-- <div class="brand-search">
                     <label for="brand">Choose a brand:</label>
                     <select name="brand" id="brand">
                         <option value="nike">Nike</option>
@@ -81,7 +133,7 @@
                         <option value="yellow">yellow</option>
                         <option value="white">white</option>
                     </select>
-                </div>
+                </div> -->
 
                 <div class="search">
                     <button class="search-button">Search</button>
