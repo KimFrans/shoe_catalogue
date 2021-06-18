@@ -21,6 +21,8 @@ function shoeCatalogue(){
     {shoe:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2ePp1xFTDSOhXLAdu-hoHjbyaoNH8aKpSHrPQjRxDBT7JHb2WBpTgUGo55enrWDmjKIo&usqp=CAU", brand:"jordan", size:"5", color:"grey", stock:"15", price:"1500"},
     {shoe:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDGILtFg2jC8Yt_NT7GWYamplrCJbTo5ilhYNYVQ-94VftzXcZ1_54BEcpabzf8WpSJj4&usqp=CAU", brand:"jordan", size:"2", color:"pink", stock:"10", price:"1200"}];
 
+    var noMatch = ""
+
 
     function getShoes(){
         return shoes
@@ -28,8 +30,14 @@ function shoeCatalogue(){
 
     function filterShoeBrands(brand, size, color){
         var shoeFilter = shoes.filter(function (currentElement){
-            return currentElement.brand == brand && currentElement.size == size && currentElement.color == color
+           return currentElement.brand == brand && currentElement.size == size && currentElement.color == color
+           
         });
+        
+        // if(shoeFilter === []){
+        //     noMatch = "There are no shoes in this catalogue that match your search"
+        // }
+
         console.log(shoeFilter)
         return shoeFilter
         
@@ -38,6 +46,7 @@ function shoeCatalogue(){
     function values(){
         return{
             shoeObj: shoes,
+            noMatchMessage : noMatch,
         }
     }
     

@@ -4,6 +4,9 @@ var display = document.querySelector(".display")
 var brandSelect = document.getElementById("brand")
 var sizeSelect = document.getElementById("size")
 var colourSelect = document.getElementById("color")
+
+var addToCart = document.querySelector(".addToCart")
+
 // console.log(searchBtn)
 var shoeFactory = shoeCatalogue()
 
@@ -18,14 +21,13 @@ var userData = { shoe: shoeFactory.values().shoeObj }
 var userDataHTML = userTemplate(userData)
 templateDisplay.innerHTML = userDataHTML
 
-
 searchBtn.addEventListener("click", function shoeFiltering() {
 
   var filteredData = { shoe: shoeFactory.filterShoeBrands(brandSelect.value, sizeSelect.value, colourSelect.value) }
   var filteredDataHTML = userTemplate(filteredData)
   templateDisplay.innerHTML = filteredDataHTML
-
-
+  
+  // templateDisplay.innerHTML = shoeFactory.values().noMatchMessage
 });
 
 // function myFunction() {
