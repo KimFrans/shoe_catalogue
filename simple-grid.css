@@ -256,18 +256,11 @@ h2 {
   text-shadow: 2px 2px rgb(247, 244, 245);
   font-weight: bold;
 }
-.header{
-  text-align: center;
-  padding-top: 0.5%;
-  padding-bottom: 0.5%;
-  border-radius: 20px;
-  background-image: linear-gradient(to bottom right,rgb(109, 148, 231),rgb(47, 216, 132),rgb(228, 120, 138));
 
-}
 .search-menu{
   /* margin-top: 2%; */
   /* float: left; */
-  width: 100%;
+  /* width: 100%; */
   padding: 1em;
   background-color: rgb(241, 149, 165);
   border-radius: 15px;
@@ -301,19 +294,28 @@ h2 {
   font-size: 16px;
   margin: 4px 2px;
 }
+.search-menu .home{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+}
 
 li{
   margin: 0 auto;
   padding: 5px 5px;
-  background-color:#ddd;
+  background-color:rgb(221, 221, 221);
   display: inline-block;
   color: black;
   text-align: center;
   border-radius: 10px;
 }
-/* .display{
-  float: right;
-} */
+
 img{
   width: 11rem;
   height: 12rem;
@@ -329,99 +331,41 @@ img{
   font-size: 12px;
   /* margin: 4px 2px; */
 }
-/* i{
-  overflow: hidden;
-  color: rgb(97, 78, 81);
-  background-color: rgb(136, 176, 236);
-  font-size: 2rem;
-  float: right;
-  margin-right: 2%;
-  margin-top: 2%;
-} */
 
-/* Popup container - can be anything you want */
-/* .popup {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-} */
-
-/* The actual popup */
-/* .popup .popuptext {
-  visibility: hidden;
-  width: 160px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -80px;
-} */
-
-/* Popup arrow */
-/* .popup .popuptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-} */
-
-/* Toggle this class - hide and show the popup */
-/* .popup .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s;
-} */
-
-/* Add animation (fade in the popup) */
-/* @-webkit-keyframes fadeIn {
-  from {opacity: 0;} 
-  to {opacity: 1;}
-} */
-
-/* @keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
-} */
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  /* position: fixed; Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 75%; /* Full width */
-  /* height: 100%; Full height */
-  overflow: auto; /* Enable scroll if needed */
-  /* background-color: rgb(0,0,0); Fallback color */
-  /* background-color: rgba(0,0,0,0.4); Black w/ opacity */
+#cart-btn{
+  margin-left: 2%;
+  margin-top: 1%;
+  font-size: 16px;
+  border: none;
+  
 }
 
-/* Modal Content/Box */
-.modal-content {
+.show-cart li {
+  display: flex;
+}
+.card {
+  margin-bottom: 20px;
+}
+.card-img-top {
+  width: 200px;
+  height: 200px;
+  align-self: center;
+}
+
+
+
+/* Modal Content */
+/* .modal-content {
   background-color: #fefefe;
-  margin:  auto; /* 15% from the top and centered */
+  margin: auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
+  width: 80%;
+} */
 
 /* The Close Button */
 .close {
-  color: #aaa;
+  color: #aaaaaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -429,28 +373,59 @@ img{
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: #000;
   text-decoration: none;
   cursor: pointer;
 }
 
-#navbar #cart-btn{
-  /* float: right; */
-  font-size: 2rem;
-  background-color: rgb(136, 176, 236);
-  border: none;
-  margin-right: 2%;
-  margin-top: 2%;
+header{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  position: relative;
 }
 
-.remove-cart{
-  float: right;
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 1em 1em;
-  text-align: center;
-  text-decoration: none;
-  /* display: inline-block; */
-  font-size: 12px;
+.overlay{
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+  background-image: linear-gradient(to bottom right,rgb(109, 148, 231),rgb(47, 216, 132),rgb(228, 120, 138));
+  
 }
+
+nav{
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px 60px 0 60px;
+}
+
+li a{
+  padding: 5px;
+  background-color: white;
+  text-decoration: none;
+}
+
+.cart ion-icon{
+  vertical-align: bottom;
+  font-size: 20px;
+  padding-right: 5px;
+}
+
+.cart a{
+  cursor: pointer;
+  text-decoration: none;
+}
+

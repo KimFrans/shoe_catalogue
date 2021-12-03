@@ -1,3 +1,4 @@
+// var searchBtn = document.querySelector(".search-button")
 var searchBtn = document.querySelector(".search-button")
 var display = document.querySelector(".display")
 
@@ -5,7 +6,9 @@ var brandSelect = document.getElementById("brand")
 var sizeSelect = document.getElementById("size")
 var colourSelect = document.getElementById("color")
 
-var addToCart = document.querySelector(".addToCart")
+var addToCart = document.getElementsByClassName(".btn btn-success btn-md")
+
+var removeCartItems = document.getElementsByClassName(".removeFromCart")
 
 // console.log(searchBtn)
 var shoeFactory = shoeCatalogue()
@@ -26,37 +29,27 @@ searchBtn.addEventListener("click", function shoeFiltering() {
   var filteredData = { shoe: shoeFactory.filterShoeBrands(brandSelect.value, sizeSelect.value, colourSelect.value) }
   var filteredDataHTML = userTemplate(filteredData)
   templateDisplay.innerHTML = filteredDataHTML
-  
+
   // templateDisplay.innerHTML = shoeFactory.values().noMatchMessage
 });
 
-// function myFunction() {
-//   var popup = document.getElementById("myPopup");
-//   popup.classList.toggle("show");
+// homeBtn.addEventListener("click", function getShoes() {
+
+//   var homeData = { shoe: shoeFactory.getShoes() }
+//   var homeDataHTML = userTemplate(homeData)
+//   templateDisplay.innerHTML = homeDataHTML
+
+// });
+
+// addToCart.addEventListener("click", function addingToCart(){
+
+  
+
+// });
+
+// for(var i=0; i < removeCartItems.length; i++){
+//   var button = removeCartItems[i]
+//   button.addEventListener("click", function(event){
+//     var buttonClicked = event.target
+//   })
 // }
-
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("cart-btn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-btn.onclick = function () {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}

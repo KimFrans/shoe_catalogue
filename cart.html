@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://kit.fontawesome.com/455b1f2011.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <link rel="stylesheet" href="simple-grid.css">
+    <link rel="stylesheet" href="skeleton.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Catalogue</title>
+
+    <script type="text/x-template" class="shoes">
+        {{#each shoe}}
+                <li class="shoe-item">
+                    <img src="{{this.shoe}}" alt=""><br>
+                    <label for="brand">Brand: </label>{{this.brand}}<br>
+                    <label for="brand">Size: </label>{{this.size}}<br>
+                    <label for="brand">Colour: </label>{{this.color}}<br>
+                    <label for="brand">Stock: </label>{{this.stock}}<br>
+                    <label for="brand">Price: R </label>{{this.price}}<br>
+                    <button class="addToCart">Add to cart</button>
+                </li>
+        {{/each}}
+    </script>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="overlay"></div>
+        <nav>
+            <h2>Lubabalo's Shoe Catalogue</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="cart">
+                    <a href="cart.html">
+                        <ion-icon name="basket"></ion-icon>Cart <span>0</span>
+                        <!-- <button id="cart-btn"><i class="fas fa-shopping-cart"></i>Cart</button> -->
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            
+        </tr>
+        <!-- {{#each}} -->
+        <tr>
+            <td>{{shoe}}</td>
+            <td>{{price}}</td>
+            <td><input type="number" id="quantity" name="quantity" min="1" max="5"></td>
+            <td><button class="removeFromCart">remove</button></td>
+        </tr>
+        <!-- {{/each}} -->
+    </table>
+
+
+
+    <script src="./factory-function/shoe-factory.js"></script>
+    <script src="./javascript/shoe-cat-DOM.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+</body>
+
+</html>
